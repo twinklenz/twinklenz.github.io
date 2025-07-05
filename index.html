@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twinkle Charingiya - L&D Leader & Future CEO</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=') center/cover;
+            border: 3px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .profile-info .subtitle {
+            font-size: 1.25rem;
+            color: #64748b;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64748b;
+        }
+
+        .nav-menu {
+            background: white;
+            padding: 1rem;
+            border-radius: 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #64748b;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            background: #f1f5f9;
+            color: #1a1a1a;
+        }
+
+        .section {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            text-align: left;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .section h2::after {
+            display: none;
+        }
+
+        .career-aspirations {
+            background: #f8fafc;
+            color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .strength-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .strength-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .strength-item i {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .goal-category {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .goal-category h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .goal-list {
+            list-style: none;
+        }
+
+        .goal-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .goal-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .cv-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .experience-company {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .experience-date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .reflection-post {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .reflection-post h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .reflection-meta {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .linkedin-btn {
+            background: linear-gradient(135deg, #0077b5, #0086c7);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .linkedin-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .experience-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=" alt="Twinkle Charingiya" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <div class="profile-info">
+                    <h1>Twinkle Charingiya</h1>
+                    <p class="subtitle">L&D Leader | Future CEO | MBI Student</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>twinklecharingiya@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>0223792660</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Auckland, New Zealand</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Project Work</a></li>
+                <li><a href="#development">Professional Development</a></li>
+                <li><a href="#reflections">Reflective Learning</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            
+            <div class="career-aspirations">
+                <h3><i class="fas fa-rocket"></i> Career Aspirations & Purpose</h3>
+                <p>As a seasoned Learning and Development professional with over 7 years of experience, I am passionate about creating transformative learning experiences that drive organizational success. Currently pursuing my Master of Business and Innovation (MBI) at ICL Graduate Business School, I am strategically positioning myself to become a future CEO who leads through learning, innovation, and people development.</p>
+                <p>My vision is to build organizations where continuous learning is embedded in the DNA, where every individual is empowered to reach their full potential, and where innovation thrives through strategic leadership. I believe that the future belongs to leaders who can navigate complexity, drive transformation, and inspire others to achieve excellence.</p>
+            </div>
+
+            <h3><i class="fas fa-chart-line"></i> Self-Evaluation</h3>
+            
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Strategic Thinking</h4>
+                    <p>Ability to see the big picture and align learning initiatives with business objectives</p>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-users"></i>
+                    <h4>People Leadership</h4>
+                    <p>Proven track record of developing teams and driving performance through effective L&D strategies</p>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Process Innovation</h4>
+                    <p>Experience in designing and implementing learning solutions using ADDIE model and modern methodologies</p>
+                </div>
+                <div class="strength-item">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Stakeholder Management</h4>
+                    <p>Strong ability to collaborate with business leaders, SMEs, and cross-functional teams</p>
+                </div>
+            </div>
+
+            <h4>Areas for Development</h4>
+            <p>While I excel in learning and development, I am actively working to strengthen my financial acumen, global market understanding, and digital transformation leadership skills through my MBI program. These competencies are essential for my CEO aspirations and will complement my people-centric leadership approach.</p>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="https://www.linkedin.com/in/twinkle-charingiya-892b3b188" class="linkedin-btn" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    View My LinkedIn Profile
+                </a>
+            </div>
+        </section>
+
+        <!-- Project Work Section -->
+        <section id="projects" class="section">
+            <h2><i class="fas fa-project-diagram"></i> Project Work</h2>
+            
+            <div class="project-card">
+                <h3>Comprehensive Learning Ecosystem Transformation at Genpact</h3>
+                <p><strong>Project Context:</strong> As L&D Manager at Genpact, I led a comprehensive transformation of the learning ecosystem to align with the company's digital transformation goals and improve employee performance across multiple business units.</p>
+                
+                <p><strong>Challenge:</strong> The existing training programs were fragmented, lacked business alignment, and showed limited impact on performance metrics. With a workforce of over 1,000 employees across different functions, we needed a scalable, measurable learning solution.</p>
+                
+                <p><strong>My Role & Approach:</strong></p>
+                <ul>
+                    <li>Conducted comprehensive Training Need Analysis across all business units</li>
+                    <li>Designed integrated learning modules using ADDIE model and Gagne's 9 events</li>
+                    <li>Implemented blended learning approach combining ILT, e-learning, and case studies</li>
+                    <li>Established performance measurement framework using Kirkpatrick's evaluation model</li>
+                    <li>Managed training logistics and vendor relationships for seamless delivery</li>
+                </ul>
+                
+                <p><strong>Outcomes:</strong></p>
+                <ul>
+                    <li>Achieved 92% training completion rate across all programs</li>
+                    <li>Improved employee performance scores by 35% within 6 months</li>
+                    <li>Reduced training costs by 25% through optimized resource allocation</li>
+                    <li>Enhanced stakeholder satisfaction with training ROI visibility</li>
+                    <li>Created a scalable learning framework adopted company-wide</li>
+                </ul>
+                
+                <p><strong>Key Learnings:</strong> This project reinforced my understanding of the critical link between learning strategy and business outcomes. It also highlighted the importance of data-driven decision making in L&D, a skill that directly supports my CEO aspirations.</p>
+            </div>
+        </section>
+
+        <!-- Professional Development Section -->
+        <section id="development" class="section">
+            <h2><i class="fas fa-graduation-cap"></i> Professional Development</h2>
+            
+            <div class="goals-grid">
+                <div class="goal-category">
+                    <h3><i class="fas fa-user-graduate"></i> Personal Learning Goals</h3>
+                    <ul class="goal-list">
+                        <li>Advanced Leadership Psychology and Change Management</li>
+                        <li>Digital Transformation and AI-driven Learning Technologies</li>
+                        <li>Financial Management and Strategic Planning for executives</li>
+                        <li>Cross-cultural Communication and Global Business Acumen</li>
+                        <li>Data Analytics and Business Intelligence for Decision Making</li>
+                    </ul>
+                </div>
+                
+                <div class="goal-category">
+                    <h3><i class="fas fa-briefcase"></i> Professional Learning Goals</h3>
+                    <ul class="goal-list">
+                        <li>Secure Chief Learning Officer position in a Fortune 500 company</li>
+                        <li>Build a global network of C-suite executives and thought leaders</li>
+                        <li>Establish myself as a thought leader in L&D and organizational transformation</li>
+                        <li>Launch a strategic consulting practice focused on learning-driven growth</li>
+                        <li>Achieve CEO position in an innovative, people-centric organization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h3><i class="fas fa-file-alt"></i> Professional Experience</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">L&D Manager</div>
+                            <div class="experience-company">Genpact</div>
+                        </div>
+                        <div class="experience-date">October 2022 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Training need analysis and design training modules, activities, assessments</li>
+                        <li>Organize and manage training venues and logistics for efficient delivery</li>
+                        <li>Maintain and publish training reports with internal and external stakeholders</li>
+                        <li>Collaborate with Overall Lead and Operations Lead to identify performance opportunities</li>
+                        <li>Offer strategic suggestions and solutions for team improvement</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Senior L&D Specialist</div>
+                            <div class="experience-company">Accenture</div>
+                        </div>
+                        <div class="experience-date">August 2021 - October 2022</div>
+                    </div>
+                    <ul>
+                        <li>Liaised with business leaders, stakeholders & SMEs for project planning</li>
+                        <li>Designed comprehensive learning solutions using ADDIE model</li>
+                        <li>Applied Instructional Design theories and Kirkpatrick's evaluation levels</li>
+                        <li>Managed projects and facilitated leadership and new-joiners training</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Lead L&D Specialist</div>
+                            <div class="experience-company">Concentrix</div>
+                        </div>
+                        <div class="experience-date">September 2019 - July 2021</div>
+                    </div>
+                    <ul>
+                        <li>Managed recruitment and new hire training programs</li>
+                        <li>Designed and curated comprehensive learning solutions</li>
+                        <li>Led project management initiatives and stakeholder engagement</li>
+                        <li>Delivered training facilitation and content development</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">L&D Coach</div>
+                            <div class="experience-company">British Telecom</div>
+                        </div>
+                        <div class="experience-date">December 2015 - September 2019</div>
+                    </div>
+                    <ul>
+                        <li>Created learning content and curriculum development</li>
+                        <li>Managed stakeholder relationships and training delivery</li>
+                        <li>Led project management and recruitment initiatives</li>
+                    </ul>
+                </div>
+
+                <h4>Education</h4>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">Master of Business and Innovation (MBI)</div>
+                            <div class="experience-company">ICL Graduate Business School</div>
+                        </div>
+                        <div class="experience-date">Current</div>
+                    </div>
+                    <p>Focusing on strategic leadership, digital transformation, and innovation management</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="experience-title">BA (Hons) in Sociology</div>
+                            <div class="experience-company">Delhi University</div>
+                        </div>
+                        <div class="experience-date">2011 - 2014</div>
+                    </div>
+                </div>
+
+                <h4>Key Skills</h4>
+                <p>TTT Certified, Instructional Design, Content Development, Stakeholder Management, Project Management, Training Facilitation, MS Office Suite, Client Management, Public Speaking</p>
+            </div>
+        </section>
+
+        <!-- Reflective Learning Section -->
+        <section id="reflections" class="section">
+            <h2><i class="fas fa-journal-whills"></i> Reflective Learning</h2>
+            
+            <div class="reflection-post">
+                <h3>Strategic Leadership in Project Management</h3>
+                <div class="reflection-meta">Course: Project Management | Date: November 2024</div>
+                <p>Through the Project Management course, I discovered the profound connection between effective project leadership and organizational transformation. The most significant learning was understanding how project management principles can be scaled to drive enterprise-wide change initiatives.</p>
+                <p>This knowledge proved invaluable when I led the learning ecosystem transformation at Genpact. By applying risk management frameworks and stakeholder engagement strategies learned in the course, I was able to navigate complex organizational dynamics and deliver measurable results. The experience taught me that successful leaders must be skilled project orchestrators.</p>
+                <p>I now apply these principles daily in my role, treating each learning intervention as a strategic project with clear objectives, timelines, and success metrics. This approach has significantly improved my credibility with senior leadership and positioned me as a strategic business partner rather than just a training provider.</p>
+            </div>
+
+            <div class="reflection-post">
+                <h3>Innovation as a Competitive Advantage</h3>
+                <div class="reflection-meta">Course: Enterprise Innovation | Date: December 2024</div>
+                <p>The Enterprise Innovation course fundamentally shifted my perspective on how organizations can create sustainable competitive advantages through systematic innovation processes. I learned that innovation is not just about new products or services, but about reimagining every aspect of business operations.</p>
+                <p>This learning directly influenced my approach to L&D strategy. Instead of following traditional training models, I began incorporating design thinking methodologies into learning design, creating more engaging and effective learning experiences. The innovation frameworks helped me identify untapped opportunities in talent development.</p>
+                <p>Moving forward, I plan to establish innovation labs within L&D functions, where employees can experiment with new learning technologies and methodologies. This approach aligns with my CEO aspirations by demonstrating how learning leaders can drive organizational innovation.</p>
+            </div>
+
+            <div class="reflection-post">
+                <h3>Digital Transformation Through IT Service Management</h3>
+                <div class="reflection-meta">Course: IT Service Management and Strategy | Date: January 2025</div>
+                <p>Understanding IT service management opened my eyes to the critical role of technology infrastructure in enabling business transformation. I learned how service-oriented thinking can be applied beyond IT to create more efficient and user-centric business processes.</p>
+                <p>This knowledge became instrumental when I proposed a digital learning platform at Genpact. By applying ITIL frameworks, I was able to design a service delivery model that improved user experience while reducing operational costs. The systematic approach to service management enhanced my strategic thinking capabilities.</p>
+                <p>I now view all L&D initiatives through a service management lens, focusing on user experience, continuous improvement, and measurable service levels. This mindset shift has prepared me to lead digital transformation initiatives as a future CEO.</p>
+            </div>
+
+            <div class="reflection-post">
+                <h3>Information Security as Strategic Imperative</h3>
+                <div class="reflection-meta">Course: Information Security Management | Date: February 2025</div>
+                <p>The Information Security Management course revealed how cybersecurity has evolved from a technical concern to a strategic business imperative. I learned that modern leaders must understand security risks and their impact on business continuity and reputation.</p>
+                <p>This knowledge proved crucial when designing online learning platforms and managing sensitive employee data. I implemented security-by-design principles in all L&D technology initiatives, ensuring compliance while maintaining user accessibility. The course enhanced my risk management capabilities significantly.</p>
+                <p>As I progress toward CEO-level roles, I now appreciate how security considerations must be integrated into every strategic decision. This understanding will be essential for leading organizations in an increasingly digital and threat-prone business environment.</p>
+            </div>
+
+            <div class="reflection-post">
+                <h3>Leading Business Transformation</h3>
+                <div class="reflection-meta">Course: Business Transformation | Date: March 2025</div>
+                <p>The Business Transformation course provided me with frameworks for leading large-scale organizational change. I learned that successful transformation requires not just strategic vision, but also deep understanding of human psychology and organizational dynamics.</p>
+                <p>This learning immediately applied to my role where I was tasked with transforming the learning culture at Genpact. By applying change management principles and stakeholder engagement strategies, I was able to overcome resistance and create buy-in for new learning initiatives. The transformation resulted in measurable improvements in employee engagement and performance.</p>
+                <p>These skills are fundamental for my CEO aspirations, as modern leaders must be skilled transformation agents. I plan to continue developing these capabilities through practice and further study, focusing on digital transformation and cultural change management.</p>
+            </div>
+
+            <div class="reflection-post">
+                <h3>Peer Evaluation: Leadership Presence and Communication</h3>
+                <div class="reflection-meta">Peer Feedback Session | Date: April 2025</div>
+                <p>During a recent peer feedback session, my colleagues highlighted my strengths in strategic thinking and ability to connect learning initiatives to business outcomes. However, they also provided valuable feedback about my communication style during presentations.</p>
+                <p>The feedback indicated that while my content was always well-researched and valuable, I sometimes assumed too much prior knowledge from the audience. My peers suggested that I could be more effective by starting with foundational concepts and building complexity gradually.</p>
+                <p>This feedback was invaluable for my development as a future CEO. I immediately began practicing storytelling techniques and audience analysis before presentations. The result has been more engaging and impactful communication, which is essential for executive leadership. I continue to seek feedback regularly to refine my executive presence.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">
+                I'm always interested in connecting with fellow professionals, discussing L&D innovations, or exploring collaboration opportunities. Feel free to reach out!
+            </p>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY
